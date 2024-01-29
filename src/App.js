@@ -9,12 +9,17 @@ function App() {
      console.log("result", result);
   };
 
+  // const setData = async () => {
+  //   console.log("clicking...")
+  //   const result = await window.electron.ipcRenderer.setStoreValue("token", "2");
+  //   console.log("set result", result);
+  // }
+
   const setData = async () => {
     console.log("clicking...")
-    const result = await window.electron.ipcRenderer.setStoreValue("token", "2");
-    console.log("set result", result);
+    const result = await window.electron.dotConnection("greeting", "pan pan");
+    console.log("hex result", result);
   }
-
 
   
   useEffect(() => {

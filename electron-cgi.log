@@ -1,0 +1,6 @@
+2024-01-29 13:03:31.599 -05:00 [VRB] STDIN: {"type": "REQUEST", "request": {"type":"greeting","id":"de503e48-bc80-416c-abb1-4bf7f88cd42f","args":"\"Mom from C#\""}}	
+2024-01-29 13:03:31.851 -05:00 [VRB] STDOUT: {"type":"RESPONSE","response":{"result":"Hello Mom from C#!","id":"de503e48-bc80-416c-abb1-4bf7f88cd42f"}}
+2024-01-29 13:04:45.623 -05:00 [VRB] STDIN: {"type": "REQUEST", "request": {"type":"greeting","id":"6ea250ad-c5e5-43ca-84a9-b5053feb9223","args":"\"Mom from C#\""}}	
+2024-01-29 13:04:45.760 -05:00 [VRB] STDOUT: {"type":"RESPONSE","response":{"result":"Hello Mom from C#!","id":"6ea250ad-c5e5-43ca-84a9-b5053feb9223"}}
+2024-01-29 13:16:28.804 -05:00 [VRB] STDIN: {"type": "REQUEST", "request": {"type":"greeting","id":"a8ec259f-d745-4d3f-bfc7-f67436495298","args":"\"Pan Wang\""}}	
+2024-01-29 13:16:29.009 -05:00 [VRB] STDOUT: {"type":"RESPONSE","response":{"result":"Hello Pan Wang!","id":"a8ec259f-d745-4d3f-bfc7-f67436495298"}}
