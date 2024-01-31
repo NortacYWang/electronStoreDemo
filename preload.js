@@ -1,11 +1,14 @@
 const { contextBridge, ipcRenderer } = require("electron");
 const { IpcEvents } = require("./src/main/db/constants.js");
-const { dotConnection } = require("./dotConnection.js");
 
 const electronHandler = {
   ipcRenderer: {
     setStoreValue: async (key, value) => {
-      const result = ipcRenderer.invoke(IpcEvents.setStoreValue, key, value);
+      const result = await ipcRenderer.invoke(
+        IpcEvents.setStoreValue,
+        key,
+        value
+      );
       return result;
     },
 
@@ -13,16 +16,11 @@ const electronHandler = {
       const storeData = await ipcRenderer.invoke(IpcEvents.loadStoreData);
       return storeData;
     },
-  },
-  dotConnection: async (method, hex) => {
-    try {
-      const result = await dotConnection.send(method, hex);
-    
-      return result;
-    } catch (err) {
-      console.log("err", err);
-      return err;
-    }
+
+    unzipHex: async (toUnzip) => {
+      const storeData = await ipcRenderer.invoke(IpcEvents.unZip, toUnzip);
+      return storeData;
+    },
   },
 };
 
